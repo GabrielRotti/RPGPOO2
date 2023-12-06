@@ -1,0 +1,258 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    list-style-type: none;
+}
+
+#page-header {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+#page-header p {
+    color: #242526;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+#page-header nav {
+    margin-top: 1.5rem;
+}
+
+#page-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+#page-header nav ul li {
+    position: relative;
+}
+
+#page-header nav ul li a {
+    text-decoration: none;
+    color: #242526;
+    transition: all .3s;
+}
+
+#page-header nav ul li a:hover {
+    color: #444444;
+}
+
+#page-header nav ul li a:hover span {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#page-header nav ul li a span {
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    background: #242526;
+    left: 0;
+    right: 0;
+    transform: translateY(.5rem);
+    transition: all .5s;
+    opacity: 0;
+}
+
+#character-erase {
+    text-align: center;
+}
+
+h1 {
+    color: #242526;
+    font-size: 3rem;
+}
+
+hr.divisor {
+    height: 1px;
+    background: #f2f2f2;
+}
+
+.dnd {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.character-list {
+    justify-content: center;
+}
+
+.character-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F9F9F9;
+    padding: 2.2rem;
+    border: 2px solid #242526;
+    border-radius: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.character-box figure {
+    overflow: hidden;
+    width: 8rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.character-box figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.character-title {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.character-title > h2 {
+    color: #242526;
+    font-size: 2.5rem;
+}
+
+.character-title > h6 {
+    color: #3A3B3C;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.character-stats {
+    margin-bottom: .8rem;
+}
+
+.character-attributes {
+    margin: .8rem 0;
+}
+
+.character-attributes, .character-stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.character-stats {
+    justify-content: space-between;
+}
+
+.character-stat {
+    display: inline-flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.character-attribute {
+    display: inline-flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-start;
+}
+
+.character-attribute-label, .character-stat-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #242526;
+}
+
+.character-attribute-value, .character-stat-value {
+    font-size: .8rem;
+    color: #3A3B3C;
+}
+
+.character-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: .8rem;
+}
+
+.character-actions a {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: white;
+    background: #3A3B3C;
+    border: 2px solid #3A3B3C;
+    border-radius: 2rem;
+    font-size: .8rem;
+    transition: all .3s;
+}
+
+.character-actions a:hover {
+    background: #F9F9F9;
+    color: #3A3B3C;
+}
+
+table {
+    width: 100%;
+    color: #242526;
+    font-size: 1.2rem;
+}
+
+table, th, td {
+    border: 1px solid #242526;
+}
+
+th, td {
+    padding: 1rem;
+}
+
+.form-group {
+    margin: 1rem;
+}
+
+label {
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    color: #242526;
+}
+
+input[type=text], input[type=number], select {
+    width: 100%;
+    padding: .5rem 1rem;
+    border: none;
+    border-bottom: 2px solid #242526;
+    font-size: 1.2rem;
+}
+
+input[type=submit] {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: white;
+    background: #3A3B3C;
+    border: 2px solid #3A3B3C;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    transition: all .3s;
+}
+
+input[type=submit]:hover {
+    background: #F9F9F9;
+    color: #3A3B3C;
+    cursor: pointer;
+}
+
+.stats-data {
+    margin-bottom: 1rem;
+}
+
+.attribute-list {
+    margin-top: 1rem;
+}

@@ -9,26 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a68623d-5f03-4c55-88cf-d7d8595a5b15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/users/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="6a68623d-5f03-4c55-88cf-d7d8595a5b15" name="Changes" comment="fix: changed equals and hashcode to use only id, user_id and race_id for comparasion.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/characters/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b81e762-e0c8-41d6-9097-1aed999d4d5e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b81e762-e0c8-41d6-9097-1aed999d4d5e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b81e762-e0c8-41d6-9097-1aed999d4d5e/storage_v2/_src_/schema/rpg.6bkBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b81e762-e0c8-41d6-9097-1aed999d4d5e/storage_v2/_src_/schema/rpg.6bkBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/HelloServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/controllers/DndController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/controllers/DndController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/controllers/UsertableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/dao/UsertableDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/dao/UsersDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/models/DndCharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/models/DndCharacters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/models/Usertable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/models/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/dao/DndCharactersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/dao/DndCharactersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/characters/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/characters/create.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/usertable/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/usertable/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/usertable/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/usertable/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/users/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,19 +28,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "rafaelbzanon"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rafaelbzanon&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -66,25 +58,54 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2ZATj9NGpq6xH29vNBuvyXRoHVD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JPA.DatabaseSchemaImportDialog": "7b81e762-e0c8-41d6-9097-1aed999d4d5e",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/rafae/Downloads/Aula14",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/gabri/Desktop/Projetos/RPGPOO2/src/main/webapp/characters",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gabri\Desktop\Projetos\RPGPOO2\src\main\webapp\characters" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gabri\Desktop\Projetos\RPGPOO2\src\main\webapp\WEB-INF\css" />
+      <recent name="C:\Users\gabri\Desktop\Projetos\RPGPOO2\src\main\webapp\WEB-INF" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.rafot" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.rafot.rpgpoo2.dao" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 10.1.16" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.16" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17" nameIsGenerated="true">
+    <configuration name="Tomcat 10.1.16" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.16" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-11" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="RPG-POO2:war exploded">
@@ -172,8 +193,101 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a68623d-5f03-4c55-88cf-d7d8595a5b15" name="Changes" comment="" />
+      <created>1701864017179</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701864017179</updated>
+      <workItem from="1701864018190" duration="30685000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: user views and controller">
+      <option name="closed" value="true" />
+      <created>1701869567655</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701869567655</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: formatting">
+      <option name="closed" value="true" />
+      <created>1701869599110</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701869599110</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: ide misc">
+      <option name="closed" value="true" />
+      <created>1701869684661</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701869684661</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: removed unused main file">
+      <option name="closed" value="true" />
+      <created>1701869707135</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701869707135</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: characters">
+      <option name="closed" value="true" />
+      <created>1701875204614</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701875204614</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore: added races and character title">
+      <option name="closed" value="true" />
+      <created>1701875266978</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701875266978</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore: remove unused import">
+      <option name="closed" value="true" />
+      <created>1701875749108</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701875749108</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: races and character title">
+      <option name="closed" value="true" />
+      <created>1701888276040</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701888276040</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore: style">
+      <option name="closed" value="true" />
+      <created>1701888296422</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701888296422</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix: changed equals and hashcode to use only id, user_id and race_id for comparasion.">
+      <option name="closed" value="true" />
+      <created>1701894760148</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701894760148</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -185,5 +299,18 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: user views and controller" />
+    <MESSAGE value="chore: formatting" />
+    <MESSAGE value="chore: ide misc" />
+    <MESSAGE value="chore: removed unused main file" />
+    <MESSAGE value="feat: characters" />
+    <MESSAGE value="chore: added races and character title" />
+    <MESSAGE value="chore: remove unused import" />
+    <MESSAGE value="feat: races and character title" />
+    <MESSAGE value="chore: style" />
+    <MESSAGE value="fix: changed equals and hashcode to use only id, user_id and race_id for comparasion." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: changed equals and hashcode to use only id, user_id and race_id for comparasion." />
   </component>
 </project>

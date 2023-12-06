@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Usuários</title>
+    <title>Lista de Raças</title>
 
     <style>
         <%@include file="/WEB-INF/css/bootstrap-grid.min.css" %>
@@ -18,9 +18,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Lista de Usuários</h1>
-                <p>Os dados de senha estão sendo mostrados por razões de estudo. O correto seria criptografar as
-                    senhas.</p>
+                <h1>Lista de Raças</h1>
             </div>
         </div>
         <div class="row">
@@ -29,7 +27,7 @@
                     <ul>
                         <li><a href="./index.jsp">Início<span></span></a></li>
                         <li><a href="./characters">Personagens<span></span></a></li>
-                        <li><a href="users?params=create">Adicionar um usuário<span></span></a></li>
+                        <li><a href="races?params=create">Adicionar uma raça<span></span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -44,16 +42,14 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Usuário</th>
-                        <th>Senha</th>
+                        <th>Nome</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="users" items="${users}">
+                    <c:forEach var="race" items="${races}">
                         <tr>
-                            <td>${users.id}</td>
-                            <td>${users.name}</td>
-                            <td>${users.password}</td>
+                            <td>${race.id}</td>
+                            <td>${race.name}</td>
                         </tr>
                     </c:forEach>
                     </tbody>
@@ -62,6 +58,5 @@
         </div>
     </div>
 </section>
-
 </body>
 </html>

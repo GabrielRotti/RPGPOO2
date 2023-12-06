@@ -1,7 +1,7 @@
 package com.rafot.rpgpoo2.controllers;
 
-import com.rafot.rpgpoo2.dao.UsersDAO;
-import com.rafot.rpgpoo2.models.Users;
+import com.rafot.rpgpoo2.dao.RaceDAO;
+import com.rafot.rpgpoo2.models.Race;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,11 +11,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "userController", value = "/users")
-public class UsersController extends HttpServlet {
+@WebServlet(name = "raceController", value = "/races")
+public class RaceController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    UsersDAO dao = new UsersDAO();
+    RaceDAO dao = new RaceDAO();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
@@ -44,22 +44,22 @@ public class UsersController extends HttpServlet {
     }
 
     private void findAll(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        List<Users> users = dao.getAll();
+        List<Race> races = dao.getAll();
 
-        request.setAttribute("users", users);
-        request.getRequestDispatcher("users/index.jsp").forward(request, response);
+        request.setAttribute("races", races);
+        request.getRequestDispatcher("races/index.jsp").forward(request, response);
     }
 
     private void create(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("users/create.jsp").forward(request, response);
+        request.getRequestDispatcher("races/create.jsp").forward(request, response);
     }
 
     private void insert(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        Users user = new Users();
-        user.setName(request.getParameter("name"));
-        user.setPassword(request.getParameter("password"));
-        dao.create(user);
+        Race race = new Race();
+        race.setName(request.getParameter("name"));
+        dao.create(race);
 
-        response.sendRedirect("users");
+        response.sendRedirect("races");
     }
+
 }
