@@ -9,18 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a68623d-5f03-4c55-88cf-d7d8595a5b15" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="6a68623d-5f03-4c55-88cf-d7d8595a5b15" name="Changes" comment="chore: removed unused main file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/models/Race.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/characters/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/characters/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7b81e762-e0c8-41d6-9097-1aed999d4d5e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7b81e762-e0c8-41d6-9097-1aed999d4d5e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/controllers/DndController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/controllers/DndController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/models/DndCharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rafot/rpgpoo2/models/DndCharacters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/users/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/users/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -81,6 +82,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -189,8 +191,41 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701864017179</updated>
-      <workItem from="1701864018190" duration="5394000" />
+      <workItem from="1701864018190" duration="11042000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: user views and controller">
+      <option name="closed" value="true" />
+      <created>1701869567655</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701869567655</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: formatting">
+      <option name="closed" value="true" />
+      <created>1701869599110</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701869599110</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: ide misc">
+      <option name="closed" value="true" />
+      <created>1701869684661</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701869684661</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: removed unused main file">
+      <option name="closed" value="true" />
+      <created>1701869707135</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701869707135</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,5 +241,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: user views and controller" />
+    <MESSAGE value="chore: formatting" />
+    <MESSAGE value="chore: ide misc" />
+    <MESSAGE value="chore: removed unused main file" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: removed unused main file" />
   </component>
 </project>

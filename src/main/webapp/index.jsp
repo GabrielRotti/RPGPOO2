@@ -2,10 +2,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Gerenciador de personagens de D&D</title>
 </head>
 <body>
-<h1>Usuarios(de crack quero mematar)</h1>
-<a href="users">Clica em mim para morer :))))</a>
+<h1>Gerenciador de personagens de D&D</h1>
+<nav>
+    <ul>
+        <li>
+            <a href="users">Usuários</a>
+        </li>
+        <li>
+            <a href="characters">Personagens</a>
+        </li>
+    </ul>
+</nav>
 </body>
 </html>

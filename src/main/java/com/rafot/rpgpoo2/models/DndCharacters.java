@@ -16,6 +16,9 @@ public class DndCharacters {
     @Column(name = "character_name")
     private String characterName;
     @Basic
+    @Column(name = "title")
+    private String title;
+    @Basic
     @Column(name = "lvl")
     private int lvl;
     @Basic
@@ -59,6 +62,14 @@ public class DndCharacters {
 
     public void setCharacterName(String characterName) {
         this.characterName = characterName;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getLvl() {
