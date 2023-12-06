@@ -10,8 +10,9 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 
-@WebServlet(urlPatterns = "/user")
+@WebServlet(name = "userController", value = "/users")
 public class UsersController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -22,31 +23,44 @@ public class UsersController extends HttpServlet {
 
         String params = request.getParameter("params");
 
-        if (params == null || params.equals("find-all")) {
-            List<Users> users = dao.getAll();
-
-            request.setAttribute("users", users);
-
-            request.getRequestDispatcher("webapp/users/index.jsp").forward(request, response);
-
+        if (params == null) {
+            findAll(request, response);
             return;
         }
 
-        if (params.equals("create")) {
-            request.getRequestDispatcher("users/create.jsp").forward(request, response);
+        switch (params) {
+            case "create":
+                create(request, response);
+                break;
+            case "insert":
+                insert(request, response);
+                break;
+            default:
+                findAll(request, response);
         }
-
-        if (params.equals("insert")) {
-            Users user = new Users();
-            user.setName(request.getParameter("name"));
-            dao.create(user);
-
-            response.sendRedirect("users");
-        }
-
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doGet(req, resp);
+    }
+
+    private void findAll(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        List<Users> users = dao.getAll();
+
+        request.setAttribute("users", users);
+        request.getRequestDispatcher("users/index.jsp").forward(request, response);
+    }
+
+    private void create(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.getRequestDispatcher("users/create.jsp").forward(request, response);
+    }
+
+    private void insert(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        Users user = new Users();
+        user.setName(request.getParameter("name"));
+        user.setPassword(request.getParameter("password"));
+        dao.create(user);
+
+        response.sendRedirect("users");
     }
 }

@@ -8,6 +8,7 @@
 </head>
 <body>
 <h1>User List</h1>
+<p>Os dados de senha estão sendo mostrados por razões de estudo. O correto seria criptografar as senhas.</p>
 <table border="1">
     <thead>
     <tr>
@@ -26,5 +27,12 @@
     </c:forEach>
     </tbody>
 </table>
+<br><br>
+<nav>
+    <ul>
+        <li><a href="./users?params=create">Adicionar um usuário</a></li>
+        <li><a href="./index.jsp">Início</a></li>
+    </ul>
+</nav>
 </body>
 </html>

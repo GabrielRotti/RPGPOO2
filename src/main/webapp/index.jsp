@@ -6,6 +6,6 @@
 </head>
 <body>
 <h1>Usuarios(de crack quero mematar)</h1>
-<a href="users/index.jsp">Clica em mim para morer :))))</a>
+<a href="users">Clica em mim para morer :))))</a>
 </body>
 </html>
