@@ -20,7 +20,7 @@ import java.util.List;
 public class DndController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    DndCharactersDAO dao = new DndCharactersDAO();
+    DndCharactersDAO characterDAO = new DndCharactersDAO();
     UsersDAO userDAO = new UsersDAO();
     RaceDAO raceDAO = new RaceDAO();
 
@@ -47,6 +47,12 @@ public class DndController extends HttpServlet {
             case "erase":
                 erase(request, response);
                 break;
+            case "edit":
+                edit(request, response);
+                break;
+            case "update":
+                update(request, response);
+                break;
             default:
                 findAll(request, response);
         }
@@ -57,7 +63,7 @@ public class DndController extends HttpServlet {
     }
 
     private void findAll(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        List<DndCharacters> characters = dao.getAll();
+        List<DndCharacters> characters = characterDAO.getAll();
 
         request.setAttribute("characters", characters);
         request.getRequestDispatcher("characters/index.jsp").forward(request, response);
@@ -73,27 +79,12 @@ public class DndController extends HttpServlet {
     }
 
     private void insert(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        DndCharacters character = new DndCharacters();
-        character.setCharacterName(request.getParameter("name"));
-        String titleParam = request.getParameter("title");
-        character.setTitle(titleParam == null ? CharacterTitleGenerator.generateTitle() : titleParam);
-        character.setLvl(Integer.parseInt(request.getParameter("lvl")));
-        character.setStr(Integer.parseInt(request.getParameter("str")));
-        character.setDex(Integer.parseInt(request.getParameter("dex")));
-        character.setCon(Integer.parseInt(request.getParameter("con")));
-        character.setWis(Integer.parseInt(request.getParameter("wis")));
-        character.setCha(Integer.parseInt(request.getParameter("cha")));
-        character.setSmt(Integer.parseInt(request.getParameter("smt")));
-        character.setUserId(Integer.parseInt(request.getParameter("user_id")));
-        character.setRaceId(Integer.parseInt(request.getParameter("race_id")));
-
-        dao.create(character);
-
+        characterDAO.create(characterDAO.createEntityFromRequest(request));
         response.sendRedirect("characters");
     }
 
     private void delete(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        DndCharacters character = dao.getById(Integer.parseInt(request.getParameter("character_id")));
+        DndCharacters character = characterDAO.getById(Integer.parseInt(request.getParameter("character_id")));
         if (character == null) {
             response.sendRedirect("characters");
             return;
@@ -104,8 +95,35 @@ public class DndController extends HttpServlet {
     }
 
     private void erase(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        DndCharacters character = dao.getById(Integer.parseInt(request.getParameter("character_id")));
-        if (character != null) dao.delete(character);
+        DndCharacters character = characterDAO.getById(Integer.parseInt(request.getParameter("character_id")));
+        if (character != null) characterDAO.delete(character);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
+    }
+
+    private void edit(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        DndCharacters character = characterDAO.getById(Integer.parseInt(request.getParameter("character_id")));
+        if (character == null) {
+            response.sendRedirect("characters");
+            return;
+        }
+
+        List<Users> users = userDAO.getAll();
+        List<Race> races = raceDAO.getAll();
+
+        request.setAttribute("users", users);
+        request.setAttribute("races", races);
+        request.setAttribute("character", character);
+        request.getRequestDispatcher("characters/edit.jsp").forward(request, response);
+    }
+
+    private void update(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        DndCharacters character = characterDAO.getById(Integer.parseInt(request.getParameter("character_id")));
+        if (character == null) {
+            response.sendRedirect("characters");
+            return;
+        }
+
+        characterDAO.update(characterDAO.createEntityFromRequest(request));
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }
