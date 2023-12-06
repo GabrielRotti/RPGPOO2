@@ -68,6 +68,10 @@ body {
     opacity: 0;
 }
 
+#character-erase {
+    text-align: center;
+}
+
 h1 {
     color: #242526;
     font-size: 3rem;
@@ -78,11 +82,19 @@ hr.divisor {
     background: #f2f2f2;
 }
 
+.dnd {
+    margin-top: 5rem;
+    width: 100%;
+}
+
 .character-list {
     justify-content: center;
 }
 
 .character-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #F9F9F9;
     padding: 2.2rem;
     border: 2px solid #242526;
@@ -190,8 +202,57 @@ hr.divisor {
 
 table {
     width: 100%;
+    color: #242526;
+    font-size: 1.2rem;
 }
 
 table, th, td {
     border: 1px solid #242526;
+}
+
+th, td {
+    padding: 1rem;
+}
+
+.form-group {
+    margin: 1rem;
+}
+
+label {
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    color: #242526;
+}
+
+input[type=text], input[type=number], select {
+    width: 100%;
+    padding: .5rem 1rem;
+    border: none;
+    border-bottom: 2px solid #242526;
+    font-size: 1.2rem;
+}
+
+input[type=submit] {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: white;
+    background: #3A3B3C;
+    border: 2px solid #3A3B3C;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    transition: all .3s;
+}
+
+input[type=submit]:hover {
+    background: #F9F9F9;
+    color: #3A3B3C;
+    cursor: pointer;
+}
+
+.stats-data {
+    margin-bottom: 1rem;
+}
+
+.attribute-list {
+    margin-top: 1rem;
 }
