@@ -13,6 +13,9 @@ public class DndCharacters {
     @Column(name = "user_id")
     private int userId;
     @Basic
+    @Column(name = "race_id")
+    private int raceId;
+    @Basic
     @Column(name = "character_name")
     private String characterName;
     @Basic
@@ -54,6 +57,14 @@ public class DndCharacters {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public int getRaceId() {
+        return raceId;
+    }
+
+    public void setRaceId(int raceId) {
+        this.raceId = raceId;
     }
 
     public String getCharacterName() {

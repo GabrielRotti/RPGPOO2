@@ -14,6 +14,14 @@
     <input type="text" name="name" id="name">
   </div>
   <div class="form-group">
+    <label for="race_id">Raça</label>
+    <select name="race_id" id="race_id">
+      <c:forEach items="${races}" var="race">
+        <option value="${race.id}">${race.name}</option>
+      </c:forEach>
+    </select>
+  </div>
+  <div class="form-group">
     <label for="lvl">Nível</label>
     <input type="number" name="lvl" id="lvl" min="1" max="20">
   </div>

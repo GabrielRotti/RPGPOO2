@@ -1,9 +1,12 @@
 package com.rafot.rpgpoo2.controllers;
 
 import com.rafot.rpgpoo2.dao.DndCharactersDAO;
+import com.rafot.rpgpoo2.dao.RaceDAO;
 import com.rafot.rpgpoo2.dao.UsersDAO;
 import com.rafot.rpgpoo2.models.DndCharacters;
+import com.rafot.rpgpoo2.models.Race;
 import com.rafot.rpgpoo2.models.Users;
+import com.rafot.rpgpoo2.utils.CharacterTitleGenerator;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -19,6 +22,7 @@ public class DndController extends HttpServlet {
 
     DndCharactersDAO dao = new DndCharactersDAO();
     UsersDAO userDAO = new UsersDAO();
+    RaceDAO raceDAO = new RaceDAO();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
@@ -36,6 +40,12 @@ public class DndController extends HttpServlet {
                 break;
             case "insert":
                 insert(request, response);
+                break;
+            case "delete":
+                delete(request, response);
+                break;
+            case "erase":
+                erase(request, response);
                 break;
             default:
                 findAll(request, response);
@@ -55,15 +65,18 @@ public class DndController extends HttpServlet {
 
     private void create(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         List<Users> users = userDAO.getAll();
+        List<Race> races = raceDAO.getAll();
 
         request.setAttribute("users", users);
+        request.setAttribute("races", races);
         request.getRequestDispatcher("characters/create.jsp").forward(request, response);
     }
 
     private void insert(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         DndCharacters character = new DndCharacters();
         character.setCharacterName(request.getParameter("name"));
-        character.setTitle(request.getParameter("title"));
+        String titleParam = request.getParameter("title");
+        character.setTitle(titleParam == null ? CharacterTitleGenerator.generateTitle() : titleParam);
         character.setLvl(Integer.parseInt(request.getParameter("lvl")));
         character.setStr(Integer.parseInt(request.getParameter("str")));
         character.setDex(Integer.parseInt(request.getParameter("dex")));
@@ -72,9 +85,27 @@ public class DndController extends HttpServlet {
         character.setCha(Integer.parseInt(request.getParameter("cha")));
         character.setSmt(Integer.parseInt(request.getParameter("smt")));
         character.setUserId(Integer.parseInt(request.getParameter("user_id")));
+        character.setRaceId(Integer.parseInt(request.getParameter("race_id")));
 
         dao.create(character);
 
         response.sendRedirect("characters");
+    }
+
+    private void delete(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        DndCharacters character = dao.getById(Integer.parseInt(request.getParameter("character_id")));
+        if (character == null) {
+            response.sendRedirect("characters");
+            return;
+        }
+
+        request.setAttribute("character", character);
+        request.getRequestDispatcher("characters/delete.jsp").forward(request, response);
+    }
+
+    private void erase(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        DndCharacters character = dao.getById(Integer.parseInt(request.getParameter("character_id")));
+        if (character != null) dao.delete(character);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }
